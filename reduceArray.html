@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>reduce array operator</title>
+</head>
+
+<body>
+   <script>
+      const number = [10, 20, 30, 40, 50]
+      const total = number.reduce((accumulator, currentValue) => { //accumulator = total
+         //ac = 10
+         return accumulator + currentValue
+      })
+      document.write(`${total} <br>`)
+
+      document.write('<br>')
+      const numb = [10, 20, 30, 40, 50]
+      const total1 = numb.reduceRight((accumulator, currentValue) => { //accumulator = total
+
+         return accumulator - currentValue
+      })
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>keyup event</title>
+</head>
+<body>
+                 <!-- <input type="password" name="password" id="password" onkeyup="show()">    -->
+                 <input type="password" name="password" id="password">   
+                 <h3 id="result"></h3>
+                  <script>
+                    //  const show=()=>{
+                    //            const pwdInput = document.getElementById('password').value;
+                    //            document.querySelector('#result').innerHTML=pwdInput         
+                    //  }
+                      const pwdInput =document.getElementById('password') 
+                    //  const show=()=>{
+                    //                     document.querySelector('h3').innerHTML=pwdInput.value
+                    //  }
+                    //  pwdInput.addEventListener('keyup', show)
+                    // annomonous function which does not have name of functio.
+                    // pwdInput.addEventListener('keyup', function (){
+                                        pwdInput.addEventListener('keyup',()=>
+                                        document.querySelector('h3').innerHTML= pwdInput.value 
+                    )
+
+                  </script>
+</body>
+</html>

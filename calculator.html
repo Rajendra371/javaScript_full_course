@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Basic Calculator</title>
+</head>
+<body>
+  <form action="#">
+    <input type="text" name="first_number" placeholder="First Number">
+    <input type="text" name="second_number" placeholder="Second Number">
+    <select name="operator">
+      <option value="+">Addition</option>
+      <option value="-">Subtraction</option>
+      <option value="*">Multiplication</option>
+      <option value="/">Division</option>
+    </select>
+    <input type="button" value="Calculate" onclick="calculate()">
+    <input type="text" name="result" id="result" placeholder="Result">
+  </form>
+</body>
+<script>
+function calculate() {
+  var firstNumber = document.getElementById("first_number").value;
+  var secondNumber = document.getElementById("second_number").value;
+  var operator = document.getElementById("operator").value;
+
+  var result = eval(firstNumber + operator + secondNumber);
+
+  document.getElementById("result").value = result;
+}
+</script>
+</html>

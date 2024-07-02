@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>switch statement</title>
+</head>
+<body>
+                   <script>
+                    const num1 = parseFloat(prompt('enter the first number'))
+                    const num2 = parseFloat(prompt('enter the second number'))
+                    const operator = prompt('what you want to do eg: +, -, /, *, %')
+                    switch(operator){
+                                        case '+':
+                                        const sum = num1+num2
+                                        document.write(`the sum is ${sum}`)
+                                        break
+                                        case '-':
+                                        const sub = num1-num2
+                                        document.write(`the sub is ${sub}`)
+                                        break
+                                        case '*':
+                                        const mul = num1*num2
+                                        document.write(`the mul is ${mul}`)
+                                        break
+                                        case '/':
+                                        const div = num1/num2
+                                        document.write(`the div is ${div}`)
+                                        break
+                                        case '%':
+                                        const modu = num1%num2
+                                        document.write(`the modu is ${modu}`)
+                                        break
+                                        default:
+                                                            document.write('invalid operator')
+                    }
+
+                   </script> 
+</body>
+</html>

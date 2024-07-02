@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>calculate using function</title>
+</head>
+
+<body>
+
+     <label for="num1">first number</label><br>
+     <input type="number" name="num1" id="num1"><br>
+     <label for="num2"> second number</label><br>
+     <input type="number" name="num2" id="num2"><br>
+     <br>
+     <input type="submit" value="Add" id="submit">
+     <input type="submit" value="Sub" id="submit">
+     <input type="submit" value="Mul" id="submit">
+     <input type="submit" value="Div" id="submit">
+     <input type="submit" value="Mod" id="submit">
+
+     <h2></h2>
+
+     <script>
+          const form = document.querySelector('#submit')
+          form.addEventListener('click', () => {
+               const x = Number(document.getElementById('num1').value)
+               const y = Number(document.getElementById('num2').value)
+               // const form=document.querySelector('form')
+
+               const sum = x + y
+               const sub = x-y
+               const mul = x*y
+               const div = x/y
+               const mod = x%y
+               document.querySelector('h2').innerHTML = `the addition is ${sum}`
+               document.querySelector('h2').innerHTML = `the subtraction is ${sub}`
+               document.querySelector('h2').innerHTML = `the multiplication is ${mul}`
+               document.querySelector('h2').innerHTML = `the division is ${div}`
+               document.querySelector('h2').innerHTML = `the reminder is ${mod}`
+          })
+     </script>
+</body>
+
+</html>

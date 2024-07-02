@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object destructuring</title>
+</head>
+<body>
+    <script>
+        const student={
+            name: 'sakshyam pokhrel',
+            adddress:'bhaktapure',
+            phone: 9812345678
+        }
+        const showData=({name,adddress,phone})=>{
+            return` my name is ${name}.<br> I live in ${adddress}.<br> conatact is ${phone}`
+        }
+        const show=showData(student)
+        document.write(`${show}`)
+    </script>
+</body>
+</html>

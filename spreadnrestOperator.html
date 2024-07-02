@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread and rest operator</title>
+</head>
+<body>
+    <script>
+        //spread
+        const array1=['apple', 'banana', 'cherry']
+        const array2=['grapes','kiwi','litchi']
+        const finalArray= [...array1,...array2]
+        document.write(`${finalArray}`)
+        console.log(finalArray)
+
+        document.write('<br>')
+
+
+        //rest operator continue to before data
+        const validateList=(...fruits)=>{
+            if(fruits.indexOf('guava')<3){
+                return['mango',...fruits]
+            }
+            else{
+                return fruits
+
+            }
+           
+
+        }
+         const result =validateList('pineapple', 'watermelon', 'guava')
+         document.write(`${result}`)
+    </script>
+</body>
+</html>

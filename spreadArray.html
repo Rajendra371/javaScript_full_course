@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>spread array operator</title>
+</head>
+<body>
+          <script>
+                    const test1 = [2,4,6,8,10]
+                    const test2 = [10,20,30,40,50]
+                    const test3=[20,40,60,80]
+                    const finalResult = [...test1,...test2,...test3]
+                    document.write(`${finalResult} <br>`)
+                    document.write(`${finalResult.includes(80)}`)
+          </script>          
+</body>
+</html>

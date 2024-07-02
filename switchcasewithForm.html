@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>switch case with form</title>
+</head>
+
+<body>
+   <label for="num1">First Number</label>
+   <input type="number" name="num1" id="num1"> <br><br>
+   <label for="num2">Second Number</label>
+   <input type="number" name="num2" id="num2"> <br><br>
+   <label for="choose">choose any operator</label>
+   <select name="choose" id="choose">
+      <option value="+">Addition</option>
+      <option value="-">Subtraction</option>
+      <option value="/">Division</option>
+      <option value="*">Multiple</option>
+      <option value="%">Reminder</option>
+
+   </select><br>
+   <input type="submit" value="send" onclick="demoFunction()">
+   <h2></h2>
+   <script>
+      const demoFunction = () => {
+         const num1 = parseFloat(document.querySelector('#num1').value)
+         const num2 = parseFloat(document.querySelector('#num2').value)
+         const operator = document.getElementById('choose').value
+         switch (operator) {
+            case '+':
+               sum = num1 + num2
+               document.querySelector('h2').innerHTML = `the sum is ${sum}`
+
+               case '-':
+               sub = num1 - num2
+               document.querySelector('h2').innerHTML = `the sub is ${sub}`
+         }
+
+      }
+
+   </script>
+</body>
+
+</html>

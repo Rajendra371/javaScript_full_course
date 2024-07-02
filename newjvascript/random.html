@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 400px;
+            border: 1px solid red;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="" alt="" id="demo">
+       
+    </div>
+    <button onclick="roll()">Rolldice</button>
+    <button onclick="dark()">White/Black Mode</button>
+   
+    <script>
+        let arr=["a.jpg", "b.jpg", "c.jpg"]
+        document.getElementById("demo").src.arr[2]
+
+        function roll(){
+       
+        let num = Math.floor(Math.random()*arr.length)
+        document.getElementById('demo').src=arr[num]
+       
+        }
+        function dark(){
+            
+        }
+       
+      
+    </script>
+</body>
+</html>

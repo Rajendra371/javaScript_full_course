@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .demo{
+            height: 500px;
+            width: 600px;
+            border: 1px solid red;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+    <img src="" alt="" id="demo1">
+    <button onclick="previous()">&lt;</button>
+    <button onclick="next()">&gt;</button>
+</div>
+
+<script>
+    let image=["a.jpg", "b.jpg", "c.jpg", "d.jpg", "e.jpg"];
+    let index=0
+    document.getElementById("demo1").src=image[index]
+    const next=()=>{
+        index++
+        if(index==image.length){
+            index=0
+            document.getElementById("demo1").src=image[index]
+        }
+
+        document.getElementById("demo1").src=image[index]
+    }
+   function previous(){
+        index--
+        if(index<0){
+            // index=4
+            index=image.length-1
+        }
+        document.getElementById("demo1").src=image[index]
+
+    }
+     setInterval(() => {
+        next()
+        
+    },2000);
+</script>
+</body>
+</html>

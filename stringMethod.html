@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>String Method</title>
+</head>
+<body>
+             <script>
+                    const text = 'welcome to dursikshya to learn programing language of web. '
+                    document.write(`${text} <br>` )
+                    // to count the number of character in a string use lenght method
+                    document.write(`${text.length} <br>`)
+                    // to find the pposition of specific string or character use indexOf() method
+
+                    document.write(`${text.indexOf('dursikshya')} <br>`)
+                    //  search()
+                    document.write(`${text.search('dursikshya')} <br>`)
+
+                    // to find the last position of a repeated string use lastIndexOf() method
+                    document.write(`${text.lastIndexOf('to')} <br>`)
+
+                    // to replace replace() method
+                    document.write(`${text.replace('learn', 'read')} <br>`)
+                    // replaceAll()
+                    document.write(`${text.replaceAll('to', 'Too')} <br>`)
+                    // replace all using regular expression
+                    document.write(`${text.replace(/to/gi, 'too')}<br>`)
+                    // i = insensitive
+
+                    // substring-> small part of a string
+                    // substring (start, end)
+                    // slice (Start, end)
+                    // substr(start, lenght)
+
+                    document.write(`${text.substring(0, 21)}................<br>`)
+                    document.write(`${text.slice(5, 30)}.......<br>`)
+                    document.write(`${text.substr(5, 30)}.......<br>`)
+
+                    // toUpperCase()
+                    // toLowerCase()
+                    document.write(`${text.toUpperCase()} <br>`)
+                    // toString()-> conver any data type to string
+                    // include()-> return true if the specific string is present
+                    document.write(`${text.includes('to')}<br>`)
+                    // split()
+                    document.write(`${text.split( )}`)
+                    document.write(`${text.split('to')}`)
+                    // indexing
+                    document.write(`${Text[0]} <br>`)
+                    // .concat()
+                    document.write('hello'.concat(text)+'<br>')
+                    // trim()->removing the whitespaces
+                    test = '  hello  '
+                    document.write(`${test.trim()} <br>`)
+                    // mattch()-> return the matching result
+                    document.write(`${text.match(/to/g)} <br>`)
+
+
+
+
+
+             </script>       
+</body>
+</html>

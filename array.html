@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array in java script</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ['Apple', 'Mango', 'Grapes']
+        document.write(`${fruits} <br>`)
+
+        // to accesss single element
+        document.write(`${fruits[0]} <br>`)
+        document.write(`${fruits[0][0]} <br>`)
+
+        //count the lenght of array
+        document.write(`${fruits.length} <br>`)
+
+        //use pop() to remove the last arrya element
+        fruits.pop()
+        document.write(`${fruits} <br>`)
+
+        // use push() to add new element at the last position
+        fruits.push('cherry')
+        document.write(`${fruits} <br>`)
+
+        //shift()-> remove element from first position
+        //usshift()-> add element at first position
+        fruits.shift()
+        document.write(`${fruits} <br>`)
+        fruits.unshift('Guava')
+        document.write(`${fruits} <br>`)
+
+        //splice()
+        fruits.splice(2, 0, 'pineapple', 'watermelon', 'banana', 'cherry',)
+        document.write(`${fruits} <br>`)
+        //2-> index number
+        //0-> number of element removed
+
+        fruits.splice(4, 2,)
+        document.write(`${fruits}`)
+
+        //short() -> assending order
+        fruits.sort()
+        document.write(`${fruits}`)
+
+        //reverse() -> reversr the element from the last to first
+        fruits.reverse()
+        document.write(`${fruits}`)
+        document.write(typeof (fruits))
+        document.write('<br>')
+        document.write(Array.isArray(fruits))
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

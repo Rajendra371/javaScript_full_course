@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>import</title>
+</head>
+<body>
+   <script type="module">
+      import {name} from  './intro.js'
+      import demo from  './intro.js'
+      
+      demo()
+      document.querySelector('h2').innerHTML=`${name}`
+   </script>
+</body>
+</html>

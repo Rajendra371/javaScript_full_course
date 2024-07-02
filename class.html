@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>class</title>
+</head>
+<body>
+ <script>
+     class Student{
+      constructor(fname, lname, roll){
+         //defininng  attribute
+         this.first_name=fname
+         this.last_name=lname
+         this.roll_no=roll
+
+      }
+     }
+     //object creation i.e. instance of class
+     const obj_ram = new Student('ram','thapa', 12)
+     const obj_shyam = new Student('shyam','thapa', 13)
+     document.querySelector('h2').innerHTML=`${obj_ram.first_name} &nbsp ${obj_shyam.last_name}`
+
+
+ </script>
+</body>
+</html>

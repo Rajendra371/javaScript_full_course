@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>date method</title>
+</head>
+
+<body>
+       <script>
+              const date = new Date()
+              document.write(`${date} <br>`)
+              // to get year use .getFullYear
+              document.write(`${date.getFullYear()}<br>`)
+              //  to get month use .getmonth() -> returns value between 0 and 11
+              document.write(`${date.getMonth()}<br>`)
+              // to get day of the week use .getDay()-> returnd 0-6
+              document.write(`${date.getDay()}<br>`)
+              // to get date use .getDate() -> 1-31
+              document.write(`${date.getDate()}<br>`)
+              // to get hours use .getHours() -> 0 -23
+              document.write(`${date.getUTCHours()}<br>`)
+              // to get minute use .getMinutes() -> 0 - 59
+              document.write(`${date.getMinutes()}<br>`)
+              //to get second use .getSecond() -> 0-59
+              document.write(`${date.getSeconds()}<br>`)
+              //to get second use .getMilisecond() 0-999
+              document.write(`${date.getMilliseconds()}<br>`)
+              //to get full time 
+              document.write(`${date.toLocaleTimeString()}<br>`)
+              // to get full time
+              document.write(`${date.toLocaleDateString()}<br>`)
+              // set method
+              const newdate = new Date()
+              newdate.setFullYear(2030, 2, 24)
+              document.write(`${newdate}<br>`)
+              date.setHours(23)
+              document.write(`${date} <br>`)
+              date.setMilliseconds(999)
+              document.write(`${date} <br>`)
+              date.setSeconds(56)
+              document.write(`${date}<br>`)
+              date.setMinutes(7)
+              document.write(`${date}<br>`)
+              date.setTime(2022)
+              document.write(`${date}<br>`)
+              //setInterval
+              const demoFunction = () => {
+                     document.querySelector('h1').innerHTML = new Date().toLocaleTimeString()
+              }
+              setInterval(demoFunction, 1000)
+
+       </script>
+       <h1></h1>
+</body>
+
+</html>

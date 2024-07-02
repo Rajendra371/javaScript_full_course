@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+</head>
+
+<body>
+    <!-- regular expression
+    [A-Z]=> all capital alphbet letters
+    [a-z]=> all small alphabet letters
+    [0-9]=> all number digit
+    [A-Za-z0-9]=> select all capital small number digits
+    [^A-Z]=> select all the letters numbers exluding capital letters
+    [^A-Za-z0-9]=> slect all symboles excluding capital small and number digits
+    ^=> checks from beggining
+    $=> check from last
+    . =>matches single character
+    * => mathes one or more precedence characters
+    ? => it means that any character doesnot depend on the position where they belongs
+
+    firstname= /^[A-Z]{1}[a-z]{3,8}$/
+    username = /^[A-Za-z0-9._@-]{4,25}$/
+    /^[A-Za-z]{3}[A-Za-z0-9._@-]{1,22}$/
+
+    emailAddress = /^[a-z]{1}[a-z._0-9]{3,20}[@]{1}[a-z]{1,}[.]{1}[a-z.]{1,7}$/
+     passwoed = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])[A-Za-z0-9!@#$%^&*()_]{8,16}$-->
+
+
+
+
+    <label for="fname">Fname</label> <br>
+
+    <input type="text" name="fname" id="fname" onkeyup="firstname()">
+    <span id="fnamealert"></span><br>
+
+    <label for="password">Password</label><br>
+    <input type="text" name="password" id="password" onkeyup="password()">
+    <span id="pwdalert"></span>
+    <script>
+        firstname = () => {
+            let result = document.getElementById("fname").value
+            document.getElementById("fnamealert").innerHTML = result
+            if (result == "") {
+                display("mandatory", "red", "fnamealert")
+            }
+            else if (!result.match(/^[A-Z]{1}[a-z]{3,8}$/)) {
+                display("invalid name filter should be capital", "red", "fnamealert")
+            }
+            else {
+                display("success", "green", "fnamealert")
+            }
+
+        }
+
+        password = () => {
+            let result = document.getElementById("password").value
+            document.getElementById("pwdalert").innerHTML = result
+
+            if (result == "") {
+                display("mandatory", "red", "fnamealert")
+            }
+
+            else if (!result.match(/^(?=.*[0-9])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])[A-Za-z0-9!@#$%^&*()_]{8,16}$/)) {
+                display("invalid name filter should be capital", "red", "fnamealert")
+            }
+
+            else {
+                display("success", "green", "fnamealert")
+            }
+        }
+
+        display = (mess, c, id) => {
+            document.getElementById(id).innerHTML = mess
+            document.getElementById(id).style.color = c
+        }
+
+
+        
+    </script>
+
+</body>
+
+</html>
